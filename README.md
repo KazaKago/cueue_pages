@@ -1,9 +1,9 @@
-# Cueue_website
+# Cueue pages
 
 **This project is under development.**  
 
 `Cueue` is management service of menu for meals every day.  
-This repository is website.  
+This repository is web pages.  
 
 # Project Repositories
 
@@ -11,5 +11,5 @@ This repository is website.
     - https://github.com/KazaKago/cueue_server
 - Client
     - https://github.com/KazaKago/cueue_client
-- Website
-    - https://github.com/KazaKago/cueue_website
+- Pages
+    - https://github.com/KazaKago/cueue_pages
