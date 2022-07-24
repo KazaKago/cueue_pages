@@ -2,7 +2,8 @@ name: DeployProduction
 
 on:
   push:
-    branches: [ production ]
+    branches: 
+      - production
   workflow_dispatch:
 
 jobs:
@@ -13,9 +14,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Deploy
-        uses: FirebaseExtended/action-hosting-deploy@v0
+        uses: ./.github/actions/deploy
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CUEUE_A9121 }}'
-          projectId: ${{ secrets.PROJECT_ID_PRODUCTION }}
-          channelId: live
+          projectId: ${{ secrets.FIREBASE_PROJECT_ID__PRODUCTION }}
+          siteId: ${{ secrets.FIREBASE_HOSTING_SITE_ID__PRODUCTION }}
+          token: ${{ secrets.FIREBASE_TOKEN }}
